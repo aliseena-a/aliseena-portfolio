@@ -1,10 +1,10 @@
 import React from "react";
 import "./Projects.css";
-import mmadata from "../assets/MMAdata_project.jpg";
-import digibox from "../assets/digibox_project.jpg";
+import mmadata from "../assets/MMAdata_project.JPG";
+import digibox from "../assets/digibox_project.JPG";
 import outfy from "../assets/outfy_project.png";
 import mmadataLogo from "../assets/mmadata_logo.png";
-import digiboxLogo from "../assets/digibox_logo.jpg";
+import digiboxLogo from "../assets/digibox_logo.JPG";
 
 // project data
 const projects = [
