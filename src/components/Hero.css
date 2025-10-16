@@ -1,0 +1,170 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.hero-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6) contrast(1.1);
+}
+
+.hero-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1) 0%,
+    rgba(0,0,0,0.4) 50%,
+    rgba(0,0,0,0.6) 100%
+  );
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* Text container */
+.hero-text {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7); /* 🔥 Text shadow added */
+}
+
+/* Profile image (absolutely positioned so it doesn’t affect layout) */
+.hero-image {
+  position: absolute;
+  right: 12%;
+  top: 50%;
+  transform: translateY(-50%) translateX(50px);
+  opacity: 0;
+  z-index: 1;
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.6)); /* 🔥 Image shadow added */
+}
+
+/* Triggered animations */
+.hero-text.animate-text {
+  animation: fadeSlideTextCinematic 2.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-image.animate-image {
+  animation: fadeInImage 1s 2.5s forwards;
+}
+
+/* Text animation: fade-in → pause → slide left (less distance now) */
+@keyframes fadeSlideTextCinematic {
+  0% { opacity: 0; transform: translateX(0); }
+  20% { opacity: 1; transform: translateX(0); }
+  60% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 1; transform: translateX(-20%); } /* was -30%, now less */
+}
+
+/* Image fade-in */
+@keyframes fadeInImage {
+  0% { opacity: 0; transform: translateY(-50%) translateX(50px); }
+  100% { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+/* Text styles */
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-text span {
+  color: #dcdcdc;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Larger profile picture */
+.hero-image img {
+  width: 300px; /* was 250px */
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+
+
+/* ================== Responsive ================== */
+@media screen and (max-width: 1024px) {
+  .hero-text h1 { font-size: 2.6rem; }
+  .hero-text p { font-size: 1.1rem; }
+  .hero-image img { width: 260px; height: 260px; }  
+  .hero-image { right: 0%; }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-image {
+    position: static;
+    transform: none;
+    opacity: 0;
+    margin-top: 30px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.6));
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text.animate-text {
+    animation: fadeSlideTextMobile 1.5s forwards;
+    animation-delay: 0.5s;
+  }
+
+  .hero-image.animate-image {
+    animation: fadeInImageMobile 1s 1.5s forwards;
+  }
+
+  .hero-text h1 { font-size: 2.2rem; }
+  .hero-text p { font-size: 1rem; }
+  .hero-image img { width: 200px; height: 200px; }
+}
+
+/* Mobile fade only (no slide) */
+@keyframes fadeSlideTextMobile {
+  0% { opacity: 0; transform: translateX(0); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInImageMobile {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1 { font-size: 1.8rem; }
+  .hero-text p { font-size: 0.9rem; }
+  .hero-image img { width: 160px; height: 160px; }
+}
+

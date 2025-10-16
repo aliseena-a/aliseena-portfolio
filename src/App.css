@@ -1,0 +1,31 @@
+/* Reset & defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* App container */
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Section layout */
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* ensures content stacks above fixed background */
+  z-index: 1;
+}
