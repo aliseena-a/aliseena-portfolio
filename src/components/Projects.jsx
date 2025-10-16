@@ -22,7 +22,7 @@ const projects = [
     title: "DigiBox",
     description:
       "Custom file storage system built using everything that me and my group have learned in my Web Development course, such as Vue, Express.js, D3, web services and more.",
-    link: "https://github.com/Koops0/WebDevFinal",
+    link: "https://github.com/aliseena-a/DigiBox",
     logo: digiboxLogo,
     preview: digibox,
   },
