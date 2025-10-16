@@ -1,11 +1,11 @@
-# 🌐 Aliseena’s Portfolio
+# Aliseena Ahmar’s Portfolio
 
 This is my personal portfolio website built using **React + Vite**.
 
 It showcases my **projects**, highlights **who I am**, and outlines **my skills and experience**.  
 Feel free to check it out and explore my work!
 
-## 🚀 Tech Stack
+## Tech Stack
 - React
 - Vite
 - CSS3 / Flexbox / Grid
