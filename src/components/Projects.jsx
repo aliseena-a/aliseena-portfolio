@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.css";
-import mmadata from "../assets/MMAdata_project.JPG";
-import digibox from "../assets/digibox_project.JPG";
+import mmadata from "../assets/MMAdata_project.jpg";
+import digibox from "../assets/digibox_project.jpg";
 import outfy from "../assets/outfy_project.png";
 import mmadataLogo from "../assets/mmadata_logo.png";
 import digiboxLogo from "../assets/digibox_logo.jpg";
