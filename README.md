@@ -14,6 +14,8 @@ Feel free to check it out and explore my work!
 ## 📫 Check It Out
 Live site: [Coming soon!](#)
 
+© 2025 Aliseena Ahmar. All rights reserved.
+
 ---
 
 Thanks for visiting my portfolio! 👋
