@@ -12,7 +12,7 @@ Feel free to check it out and explore my work!
 - JavaScript (ES6+)
 
 ## 📫 Check It Out
-Live site: [Coming soon!](#)
+Live site: [Aliseena-Portfolio](#https://aliseena-portfolio.vercel.app/)
 
 © 2025 Aliseena Ahmar. All rights reserved.
 
